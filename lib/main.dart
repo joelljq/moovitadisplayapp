@@ -50,14 +50,14 @@ class _MyAppState extends State<MyApp> {
     "King Albert Park",
     "Main Entrance",
     "Block 23",
-    "Block 20",
+    "Sports Hall",
     "SIT",
-    "Block 43",
+    "Block 44",
     "Block 37",
-    "Block 51",
-    "Block 81",
-    "Block 83",
-    "Block 73",
+    "Makan Place",
+    "Health Science",
+    "LSCT",
+    "Block 72",
     "",
     ""
   ];
@@ -376,20 +376,21 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
             ),
+            // Positioned Arrival Status Box
             Positioned(
-              top: 165,
-              right: 279,
+              top: 150,
+              right: 229,
               child: Container(
-                height: 72,
-                width: 72,
+                height: 65,
+                width: 65,
                 margin: EdgeInsets.all(100.0),
                 decoration:
                     BoxDecoration(color: ArrivalStatus, shape: BoxShape.circle),
               ),
             ),
             Positioned(
-                top: 250,
-                left: 280,
+                top: 225,
+                left: 220,
                 // Ternary logic if Bus is next stop or arrived
                 child: Status == 'Next Stop'
                     ? Image.asset(
@@ -401,11 +402,14 @@ class _MyAppState extends State<MyApp> {
                         scale: 6,
                       )),
             Positioned(
-              top: 260,
-              left: 10,
+              top: 245,
+              left: 8,
               child: Container(
+                // decoration: BoxDecoration(
+                //     border: Border.all(color: Colors.blueAccent)
+                // ),
                 height: 70,
-                width: 280,
+                width: 230,
                 // Ternary Logic to return spinning ring if status data isn't retrieved yet
                 child: Align(
                   alignment: Alignment.center,
@@ -419,7 +423,7 @@ class _MyAppState extends State<MyApp> {
                       : Text(
                           Status,
                           style: TextStyle(
-                              fontSize: 60,
+                              fontSize: 50,
                               color: Colors.cyanAccent,
                               fontFamily: 'ClinicaPro'),
                           textAlign: TextAlign.center,
@@ -428,8 +432,8 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
             Positioned(
-              top: 430,
-              left: 110,
+              top: 380,
+              left: 90,
               // Ternary Logic to return spinning ring if RTC data isn't retrieved yet
               child: RTC.isEmpty
                   ? Center(
@@ -445,19 +449,19 @@ class _MyAppState extends State<MyApp> {
             ),
             // Widget for Passenger Counter
             Positioned(
-              top: 560,
+              top: 510,
               left: 20,
               child: Text(
                 "Passengers\nCounter : ${HC}",
                 style: TextStyle(
-                  fontSize: 60,
+                  fontSize: 50,
                   color: Colors.cyanAccent,
                 ),
               ),
             ),
             Positioned(
-              top: 265,
-              right: 450,
+              top: 250,
+              right: 340,
               child: Container(
                 height: 65,
                 width: 450,
@@ -472,7 +476,7 @@ class _MyAppState extends State<MyApp> {
                     : Text(
                         bslist[currentbsindex],
                         style: TextStyle(
-                          fontSize: 60,
+                          fontSize: 55,
                           color: Colors.white,
                         ),
                         textAlign: TextAlign.start,
@@ -480,8 +484,8 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
             Positioned(
-              top: 435,
-              right: 400,
+              top: 400,
+              right: 300,
               child: Container(
                 height: 65,
                 width: 450,
@@ -495,15 +499,15 @@ class _MyAppState extends State<MyApp> {
                       )
                     : Text(bslist[secbsindex],
                         style: TextStyle(
-                          fontSize: 60,
+                          fontSize: 55,
                           color: Colors.white,
                         ),
                         textAlign: TextAlign.start),
               ),
             ),
             Positioned(
-              top: 605,
-              right: 360,
+              top: 545,
+              right: 255,
               child: Container(
                 height: 65,
                 width: 450,
@@ -517,18 +521,18 @@ class _MyAppState extends State<MyApp> {
                       )
                     : Text(bslist[thirdbsindex],
                         style: TextStyle(
-                          fontSize: 60,
+                          fontSize: 55,
                           color: Colors.white,
                         ),
                         textAlign: TextAlign.start),
               ),
             ),
             Positioned(
-              top: 779,
-              right: 10,
+              top: 690,
+              right: 5,
               child: Container(
                   height: 60,
-                  width: 1330,
+                  width: 1150,
                   // Ternary logic to return Marquee text if Current Bus Stop status is not empty
                   child: CurrentBSS.isEmpty
                       ? Center(
